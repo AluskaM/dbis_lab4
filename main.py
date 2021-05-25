@@ -56,7 +56,7 @@ while True:
 
         duration = time.time()-start_time
         with open('Duration.txt', 'w') as file:
-	        	file.write(f'Duration of inserting data is {duration}')
+		file.write(f'Duration of inserting data is {duration}')
             
             
         query = db.zno.aggregate([
@@ -74,8 +74,8 @@ while True:
                       }
                 },
                 {
-            '$sort' : { '_id.region': 1, '_id.year': 1 }
-          }
+            	     '$sort' : { '_id.region': 1, '_id.year': 1 }
+             	}
         ])
 
         data = []
