@@ -7,7 +7,7 @@ import time
 HEADER = ['Region', 'Year', 'Mark']
 while True:
     try:
-        client = MongoClient(Config.MONGO_URI)
+        client = MongoClient()
         db = client.cp_database
         collection = db.zno_res
 
